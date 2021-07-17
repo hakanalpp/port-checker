@@ -11,6 +11,7 @@ It is deployed using Docker container, Digital Ocean container registry and serv
 - [nodemailer](https://github.com/nodemailer/nodemailer)
 - [Docker](https://www.docker.com/)
 - [Digital Ocean](https://www.digitalocean.com/)
+- [Digital Ocean Container Registry](https://www.digitalocean.com/products/container-registry/)
 
 ## Installation
 - Clone the repository
