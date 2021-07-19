@@ -3,7 +3,7 @@ import { createTransport } from "nodemailer";
 import { getDate } from "../helpers/dateHelper.js";
 
 export const sendMail = async (message) => {
-  console.log(`[${getDate()}] Sending the email with the following message: ${message}`);
+  console.log(`Sending the email with the following message: ${message}`);
   try {
     const transporter = createTransport({
       host: "smtp-mail.outlook.com",
@@ -21,8 +21,8 @@ export const sendMail = async (message) => {
       subject: process.env.SUBJECT,
       text: message
     });
-    console.log(`[${getDate()}] Email successfully sent.`);
+    console.log(`Email successfully sent.`);
   } catch (err) {
-    console.log(`[${getDate()}] ${err}`);
+    console.log(`${err}`);
   }
 };

@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 import { getDate } from "../helpers/dateHelper.js";
 
 export const checkServiceAvailability = async () => {
-  console.log(`[${getDate()}] Checking Service Availibiliy.`);
+  console.log(`Checking Service Availibiliy.`);
   try {
     const response = await fetch(process.env.REQUEST_URL, {
       credentials: "include",
@@ -26,7 +26,7 @@ export const checkServiceAvailability = async () => {
     const res = await response.json();
     return res.ServiceResult.Message;
   } catch (err) {
-    console.log(`[${getDate()}] ${err}`);
+    console.log(`${err}`);
     return err.message;
   }
 };
